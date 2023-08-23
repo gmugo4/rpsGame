@@ -1,2 +1,2 @@
 # rpsGame
-rock paper scissors game
+rock paper scissors game design inspired by michalosman
