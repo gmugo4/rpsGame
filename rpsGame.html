@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Rock Paper Scissors</title>
+    <link rel="stylesheet" href="rps_style.css" />
+    <link rel="icon" type="image/x-icon" href="/rock.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link rel="shortcut icon" href="favicon.ico" /> -->
+    <!-- <script
+      src="https://kit.fontawesome.com/4c536a6bd5.js"
+      crossorigin="anonymous"
+    ></script> -->
+
+    <link rel="scripts" href="rps_scripts.js" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">ROCK PAPER SCISSORS</h1>
+    </header>
+    <div class="image-container">
+      <img  src="rock.png" style="height: 60px; width: 60px;"> 
+      <img  src="paper.png" style="height: 60px; width: 70px;"> 
+      <img  src="scissors.png" style="height: 60px; width: 50px;"> 
+    </div>
+    
+
+    <main class="main">
+      <div class="scoreboard">
+        <h2 style=" font-family: 'Press Start 2P', cursive; font-size: 25px;"
+        class="score-info" id="scoreInfo">Choose your weapon</h2>
+        <h3 style="color:rgb(107, 107, 146);" score-message id="scoreMessage">
+          First to score 5 points wins the game
+        </h3>
+        <div class="scores-container">
+          <div class="score-box">
+            <div class="sign" id="playerSign">❔</div>
+            <p class="score" id="playerScore">Player: 0</p>
+          </div>
+          <div class="score-box">
+            <div class="sign" id="computerSign">❔</div>
+            <p class="score" id="computerScore">Computer: 0</p>
+          </div>
+        </div>
+      </div>
+      <div class="buttons">
+        <button class="btn btn-square" id="rockBtn">
+          <div class="sign">✊</div>
+        </button>
+        <button class="btn btn-square" id="paperBtn">
+          <div class="sign">✋</div>
+        </button>
+        <button class="btn btn-square" id="scissorsBtn">
+          <div class="sign">✂️</div>
+        </button>
+      </div>
+    </main>
+    <footer class="footer">
+      <p style="color:rgb(107, 107, 146);">
+        Copyright © 
+        <script>
+          document.write(new Date().getFullYear()) 
+        </script>
+        gmugo4
+      </p>
+      <a href="https://github.com/gmugo4" target="_blank">
+        <i class="fab fa-github"></i
+      ></a>
+    </footer>
+    <div class="modal" id="endgameModal">
+      <p class="modal-title" style= "color: white;" id="endgameMsg"></p>
+      <button style="color:rgb(187, 183, 183)" class="btn btn-restart" id="restartBtn">Play again</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="rps_scripts.js"></script>
+  </body>
+</html>
